@@ -29,7 +29,7 @@ public class Tests {
     List<List<String>> expected = new ArrayList<>();
     expected.add(Arrays.asList(new String[] { "bob" }));
 
-    assertEquals(Arrays.asList(expected), DialogueParser.getPalindromes(Arrays.asList(input)));
+    assertEquals(expected, DialogueParser.getPalindromes(Arrays.asList(input)));
 
     // TODO 1.5: add more test cases!
   }
