@@ -39,7 +39,7 @@ public class Tests {
     assertArrayEquals(DialogueParser.countPalindromes(Arrays.asList(input1)), expected1);
 
     String[] input2 = { "Wow, Bob!", "What's up, Anna?", "there's a racecar on your kayak!", "LOL!" };
-    int[] expected2 = new int[] { 6, 2 };
+    int[] expected2 = new int[] { 6, 3 };
     assertArrayEquals(DialogueParser.countPalindromes(Arrays.asList(input2)), expected2);
 
     String[] input3 = {};
