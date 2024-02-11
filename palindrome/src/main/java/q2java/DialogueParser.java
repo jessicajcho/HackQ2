@@ -71,6 +71,7 @@ public class DialogueParser {
    * @return int - Encrypted integer in ASCII code integers
    */
   public static int encrypt(String msg) {
+    // TODO 4
     throw new UnsupportedOperationException("Unimplemented");
   }
 
@@ -81,6 +82,7 @@ public class DialogueParser {
    * @return String - decrypted string of all-caps alphabet characters
    */
   public static String decrypt(int ciphertxt) {
+    // TODO 5
     throw new UnsupportedOperationException("Unimplemented");
   }
 }

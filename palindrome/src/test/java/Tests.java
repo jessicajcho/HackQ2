@@ -20,14 +20,16 @@ public class Tests {
     String[] arr = { "hackforimpact", "is", "cool", "i", "d", "like", "to", "join" };
     List<String> exp1 = Arrays.asList(arr);
 
-    assertEquals(DialogueParser.sentenceToWords("HackforImpact is cool, I'd like to join!"), exp1);
+    assertEquals(exp1, DialogueParser.sentenceToWords("HackforImpact is cool, I'd like to join!"));
   }
 
   @Test
   void getPalindromesTests() {
     String[] input = { "Hey Bob" };
-    String[] expected = { "bob" };
-    assertEquals(DialogueParser.getPalindromes(Arrays.asList(input)), Arrays.asList(expected));
+    List<List<String>> expected = new ArrayList<>();
+    expected.add(Arrays.asList(new String[] { "bob" }));
+
+    assertEquals(Arrays.asList(expected), DialogueParser.getPalindromes(Arrays.asList(input)));
 
     // TODO 1.5: add more test cases!
   }
@@ -36,15 +38,15 @@ public class Tests {
   void countPalindromesTests() {
     String[] input1 = { " ", " ", " " };
     int[] expected1 = new int[] { 0, 0 };
-    assertArrayEquals(DialogueParser.countPalindromes(Arrays.asList(input1)), expected1);
+    assertArrayEquals(expected1, DialogueParser.countPalindromes(Arrays.asList(input1)));
 
     String[] input2 = { "Wow, Bob!", "What's up, Anna?", "there's a racecar on your kayak!", "LOL!" };
     int[] expected2 = new int[] { 6, 3 };
-    assertArrayEquals(DialogueParser.countPalindromes(Arrays.asList(input2)), expected2);
+    assertArrayEquals(expected2, DialogueParser.countPalindromes(Arrays.asList(input2)));
 
     String[] input3 = {};
     int[] expected3 = new int[] { 0, 0 };
-    assertArrayEquals(DialogueParser.countPalindromes(Arrays.asList(input3)), expected3);
+    assertArrayEquals(expected3, DialogueParser.countPalindromes(Arrays.asList(input3)));
 
   }
 
